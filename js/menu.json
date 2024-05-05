@@ -1,0 +1,196 @@
+[{
+	"id": 100,
+	"pid": 0,
+	"text": "能量租赁",
+	"iconCls": "icon-merch",
+	"state": "open",
+	"attributes": {
+		"showOrder": 10,
+		"url": ""
+	},
+	"children": [{
+		"id": 110,
+		"pid": 100,
+		"text": "租赁订单",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 10,
+			"url": "/rent_order/list"
+		}
+	}, {
+		"id": 120,
+		"pid": 100,
+		"text": "租赁规则",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 20,
+			"url": "/rent_rule/list"
+		}
+	}]
+}, {
+	"id": 200,
+	"pid": 0,
+	"text": "TRX闪兑",
+	"iconCls": "icon-merch",
+	"state": "close",
+	"attributes": {
+		"showOrder": 20,
+		"url": ""
+	},
+	"children": [{
+		"id": 210,
+		"pid": 200,
+		"text": "兑换订单",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 10,
+			"url": "/exchange_order/list"
+		}
+	}, {
+		"id": 220,
+		"pid": 200,
+		"text": "兑换规则",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 20,
+			"url": "/exchange_rule/list"
+		}
+	}]
+}, {
+	"id": 300,
+	"pid": 0,
+	"text": "资金归集",
+	"iconCls": "icon-merch",
+	"state": "close",
+	"attributes": {
+		"showOrder": 30,
+		"url": ""
+	},
+	"children": [{
+		"id": 310,
+		"pid": 300,
+		"text": "收款订单",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 10,
+			"url": "/pay_order/list"
+		}
+	}, {
+		"id": 320,
+		"pid": 300,
+		"text": "归集订单",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 20,
+			"url": "/pack_order/list"
+		}
+	}, {
+		"id": 330,
+		"pid": 300,
+		"text": "归集规则",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 30,
+			"url": "/pack_rule/list"
+		}
+	}]
+}, {
+	"id": 800,
+	"pid": 0,
+	"text": "批量管理",
+	"iconCls": "icon-merch",
+	"state": "close",
+	"attributes": {
+		"showOrder": 90,
+		"url": ""
+	},
+	"children": [{
+		"id": 810,
+		"pid": 800,
+		"text": "激活记录",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 10,
+			"url": "/account_create/list"
+		}
+	}, {
+		"id": 820,
+		"pid": 800,
+		"text": "代理记录",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 80,
+			"url": "/delegate/list"
+		}
+	}, {
+		"id": 830,
+		"pid": 800,
+		"text": "转账记录",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 30,
+			"url": "/transfer/list"
+		}
+	}]
+}, {
+	"id": 900,
+	"pid": 0,
+	"text": "系统管理",
+	"iconCls": "icon-merch",
+	"state": "close",
+	"attributes": {
+		"showOrder": 90,
+		"url": ""
+	},
+	"children": [{
+		"id": 910,
+		"pid": 900,
+		"text": "代码生成",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 10,
+			"url": "/table/list"
+		}
+	}, {
+		"id": 920,
+		"pid": 900,
+		"text": "商户管理",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 30,
+			"url": "/merch/list"
+		}
+	}, {
+		"id": 980,
+		"pid": 900,
+		"text": "商户钱包",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 80,
+			"url": "/merch_wallet/list"
+		}
+	}, {
+		"id": 990,
+		"pid": 900,
+		"text": "资源钱包",
+		"iconCls": "icon-other46",
+		"state": "open",
+		"attributes": {
+			"showOrder": 90,
+			"url": "/wallet/list"
+		}
+	}]
+}]

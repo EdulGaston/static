@@ -321,27 +321,27 @@ function closes() {
 			Tabs = top.$(o.ele);
 		}
 		if (Tabs.tabs('exists', o.text)) {
-			Tabs.tabs('select', o.text);
-		} else {
-			var tab = {
-				title : o.text,
-				closable : true,
-				content : createFrame(o.url),
-				tools : [ {
-					iconCls : 'icon-mini-refresh',
-					handler : function() {
-						var iframes = Tabs.tabs('getSelected').find('iframe');
-						if(iframes && iframes.length>0){
-							iframes[0].contentWindow.location.href=iframes[0].src;
-						}
-					}
-				} ]
-			};
-			if(o.iconCls){
-				tab.iconCls=o.iconCls;
-			}
-			Tabs.tabs('add', tab);
+			//Tabs.tabs('select', o.text);
+			Tabs.tabs('close', o.text);
 		}
+		var tab = {
+			title : o.text,
+			closable : true,
+			content : createFrame(o.url),
+			tools : [ {
+				iconCls : 'icon-mini-refresh',
+				handler : function() {
+					var iframes = Tabs.tabs('getSelected').find('iframe');
+					if(iframes && iframes.length>0){
+						iframes[0].contentWindow.location.href=iframes[0].src;
+					}
+				}
+			} ]
+		};
+		if(o.iconCls){
+			tab.iconCls=o.iconCls;
+		}
+		Tabs.tabs('add', tab);
 	}
 	page.createTabsMenu = function(ele){
 		var Tabs = ele||$("#main-tabs");
@@ -522,7 +522,7 @@ function closes() {
 	    	}
 		},
         onDblClickRow: function(index,row){
-        	page.callback && page.closeDialog(row);
+        	page.dialog.callback && page.closeDialog(row);
         },
 		onBeforeLoad: function(param){},
 		onHeaderContextMenu: function(e, field){
@@ -623,6 +623,16 @@ function closes() {
 			},
 			'Y':{
 				name:'启用',
+				style:'color:green'
+			}	
+		},
+		'wallet.status':{
+			'N':{
+				name:'未激活',
+				style:'color:red'
+			},
+			'Y':{
+				name:'已激活',
 				style:'color:green'
 			}	
 		},
@@ -799,6 +809,38 @@ function closes() {
 				name:'激活账户',
 				style:'color:blue'
 			}
+		},
+		'contract.type':{
+			'5':{name:'触发智能合约'},
+			'1':{name:'TRX 转账'},
+			'6':{name:'TRC10 转账'},
+			'2':{name:'质押资产 1.0'},
+			'3':{name:'解锁资产 1.0'},
+			'9':{name:'质押资产 2.0'},
+			'10':{name:'解锁资产 2.0'},
+			'11':{name:'提取 TRX'},
+			'12':{name:'代理资源'},
+			'13':{name:'回收资源'},
+			'14':{name:'取消解锁资产'},
+			'4':{name:'投票'},
+			'7':{name:'领取投票收益'},
+			'8':{name:'更新账户权限'}
+		},
+		'contractType':{
+			'31':{name:'触发智能合约'},
+			'1':{name:'TRX 转账'},
+			'2':{name:'TRC10 转账'},
+			'11':{name:'质押资产 1.0'},
+			'12':{name:'解锁资产 1.0'},
+			'54':{name:'质押资产 2.0'},
+			'55':{name:'解锁资产 2.0'},
+			'56':{name:'提取 TRX'},
+			'57':{name:'代理资源'},
+			'58':{name:'回收资源'},
+			'59':{name:'取消解锁资产'},
+			'4':{name:'投票'},
+			'13':{name:'领取投票收益'},
+			'46':{name:'更新账户权限'}
 		},
 		'table.template':{
 			controller:{
